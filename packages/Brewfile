@@ -1,1 +1,21 @@
+# taps
+tap "homebrew/cask"
+
+# applications
 brew "stow"
+
+# browsers
+cask "google-chrome"
+
+# messaging
+cask "slack"
+cask "zoom"
+
+# editors
+cask "visual-studio-code"
+
+# authenticator for 2fa
+cask "authy"
+
+# productivity
+cask "spotify"
