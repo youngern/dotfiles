@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+git_email="$(git config --global user.email)"
+output_file="/Users/$(whoami)/.ssh/id_ed25519"
+new_token_endpoint="https://github.com/settings/ssh/new"
+ssh-keygen -t ed25519 -C "$git_email" -f $output_file
+
+eval "$(ssh-agent -s)"
+
+touch ~/.ssh/config
+
+if [ -z "$(grep "id_ed25519" ~/.ssh/config)" ]; then
+  echo "Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_ed25519
+  " >> ~/.ssh/config
+fi
+
+ssh-add -K "$HOME/.ssh/id_ed25519"
+
+pbcopy < ~/.ssh/id_ed25519.pub
+
+open "$new_token_endpoint"

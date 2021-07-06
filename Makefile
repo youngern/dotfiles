@@ -15,6 +15,8 @@ install-cask-apps:
 install-brew-packages:
 	brew bundle --file=packages/Brewfile
 
+setup-git:
+	. $(DOTFILES_DIR)/setup/git
 defaults:
 	. $(DOTFILES_DIR)/macos/defaults
 

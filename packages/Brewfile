@@ -1,9 +1,11 @@
 # taps
 tap "homebrew/cask"
+tap "homebrew/core"
 
 # applications
 brew "stow"
 brew "gh"
+brew "awscli"
 
 # browsers
 cask "google-chrome"
