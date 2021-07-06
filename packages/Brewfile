@@ -6,6 +6,7 @@ tap "homebrew/core"
 brew "stow"
 brew "gh"
 brew "awscli"
+brew "pyenv"
 
 # browsers
 cask "google-chrome"

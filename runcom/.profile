@@ -1,0 +1,1 @@
+runcom/.zprofile
