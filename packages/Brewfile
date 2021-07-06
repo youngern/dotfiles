@@ -3,6 +3,7 @@ tap "homebrew/cask"
 
 # applications
 brew "stow"
+brew "gh"
 
 # browsers
 cask "google-chrome"
@@ -19,3 +20,4 @@ cask "authy"
 
 # productivity
 cask "spotify"
+cask "dropbox"

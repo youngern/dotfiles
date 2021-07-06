@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 
 # Languages
-
 defaults write -globalDomain AppleLanguages -array "en-US" "ko-US"
 defaults write -globalDomain NSLinguisticDataAssetsRequested -array "en" "en_US" "fr" "ko" "ko_US" "nl"
 
-# Default Browser
 
-# defaults write -globalDomain NSPreferredWebServices -dict 
 
 # Mouse and Trackpad
-
 defaults write "com.apple.mouse.scaling" -int 3
 defaults write "com.apple.trackpad.scaling" -int 3
 defaults write "com.apple.swipescrolldirection" -int 0
@@ -66,7 +62,6 @@ defaults write "com.apple.HIToolbox" "AppleSelectedInputSources" \
 '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>0</integer><key>KeyboardLayout Name</key><string>U.S.</string></dict>'
 
 # Screen Saver, Desktop and Dock
-
 defaults write -globalDomain NSTableViewDefaultSizeMode -int 2
 
 # System Preferences > Dock > Size:
@@ -78,6 +73,9 @@ defaults write "com.apple.dock" "magnification" -int 1
 
 # Finder > Preferences > Show all filename extensions
 defaults write -globalDomain "AppleShowAllExtensions" -bool false
+
+# Show Battery Percentage
+defaults write com.apple.menuextra.battery "ShowPercent" -bool true
 
 # Kill affected apps
 apps=( Dock Finder SystemUIServer )
