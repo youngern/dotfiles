@@ -3,4 +3,5 @@ tap "homebrew/cask"
 cask "google-chrome"
 cask "slack"
 cask "visual-studio-code"
+cask "authy"
 
