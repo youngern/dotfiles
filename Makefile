@@ -7,7 +7,7 @@ export STOW_DIR = $(DOTFILES_DIR)
 
 install: packages core link
 
-core: git-ssh defaults
+core: git-ssh defaults npm
 
 packages: install-brew install-brew-packages vscode-extensions
 
