@@ -25,7 +25,7 @@
     "explorer.compactFolders": false,
     "typescript.format.enable": false,
     "prettier.trailingComma": "all",
-    "editor.formatOnSave": true,
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   }
