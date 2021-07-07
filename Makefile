@@ -5,9 +5,11 @@ export XDG_CONFIG_HOME = $(HOME)/.config
 export APPLICATION_SUPPORT_HOME = $(HOME)/Library/Application\ Support
 export STOW_DIR = $(DOTFILES_DIR)
 
-install: install-brew install-brew-packages core link
+install: packages core link
 
 core: git-ssh defaults
+
+packages: install-brew install-brew-packages vscode-extensions
 
 install-brew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -21,6 +23,9 @@ npm:
 
 git-ssh:
 	. $(DOTFILES_DIR)/setup/git-ssh
+
+vscode-extensions:
+	for EXT in $$(cat packages/Codefile); do code --install-extension $$EXT; done
 
 defaults:
 	. $(DOTFILES_DIR)/macos/defaults
