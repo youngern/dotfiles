@@ -1,5 +1,6 @@
 SHELL = /bin/zsh
 DOTFILES_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+NVM_DIR := $(HOME)/.nvm
 export XDG_CONFIG_HOME = $(HOME)/.config
 export APPLICATION_SUPPORT_HOME = $(HOME)/Library/Application\ Support
 export STOW_DIR = $(DOTFILES_DIR)
@@ -13,6 +14,10 @@ install-brew:
 
 install-brew-packages:
 	brew bundle --file=packages/Brewfile
+
+npm:
+	if ! [ -d $(NVM_DIR)/.git ]; then git clone https://github.com/creationix/nvm.git $(NVM_DIR); fi
+	. $(NVM_DIR)/nvm.sh; nvm install --lts
 
 git-ssh:
 	. $(DOTFILES_DIR)/setup/git-ssh
