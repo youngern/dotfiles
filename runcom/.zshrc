@@ -6,3 +6,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual S
 source "$HOME/.zprofile"
 
 alias reload="source $HOME/.zshrc"
+
+function pyup () {
+  python -m venv env
+  source env/bin/activate
+}

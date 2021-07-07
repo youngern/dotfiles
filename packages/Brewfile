@@ -7,6 +7,8 @@ brew "stow"
 brew "gh"
 brew "awscli"
 brew "pyenv"
+brew "postgres"
+cask "docker"
 
 # browsers
 cask "google-chrome"
@@ -24,3 +26,4 @@ cask "authy"
 # productivity
 cask "spotify"
 cask "dropbox"
+cask "postman"
