@@ -4,13 +4,12 @@ export XDG_CONFIG_HOME = $(HOME)/.config
 export APPLICATION_SUPPORT_HOME = $(HOME)/Library/Application\ Support
 export STOW_DIR = $(DOTFILES_DIR)
 
-install: install-brew
+install: install-brew install-brew-packages core link
+
+core: git-ssh defaults
 
 install-brew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-install-cask-apps:
-	brew bundle --file=packages/Caskfile
 
 install-brew-packages:
 	brew bundle --file=packages/Brewfile
