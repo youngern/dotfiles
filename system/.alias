@@ -2,3 +2,9 @@ function pyup () {
   python -m venv env
   source env/bin/activate
 }
+
+function pydown () {
+  if type deactivate > /dev/null; then
+    deactivate
+  fi
+}

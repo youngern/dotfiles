@@ -27,5 +27,8 @@
     "prettier.trailingComma": "all",
     "javascript.updateImportsOnFileMove.enabled": "never",
     "window.zoomLevel": 1,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter.notebook.ipynb"
+    }
   }
