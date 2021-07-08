@@ -18,7 +18,6 @@ else
   return
 fi
 
-
 source "$HOME/.zprofile"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -38,6 +37,6 @@ setopt PROMPT_SUBST
 PROMPT='%1~ %F{green}${vcs_info_msg_0_}%f $ '
 
 
-for DOTFILE in "$DOTFILES_DIR"/system/.{alias,function}; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{alias,function,airflow}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done

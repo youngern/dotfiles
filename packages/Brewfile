@@ -9,6 +9,7 @@ brew "awscli"
 brew "pyenv"
 brew "postgres"
 brew "yarn"
+brew "tfenv"
 cask "docker"
 
 # browsers
