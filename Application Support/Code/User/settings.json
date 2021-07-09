@@ -30,5 +30,8 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "workbench.editorAssociations": {
       "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "search.exclude": {
+      "venv/": true
     }
   }
