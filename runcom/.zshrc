@@ -36,7 +36,6 @@ zstyle ':vcs_info:git:*' formats '%b'
 setopt PROMPT_SUBST
 PROMPT='%1~ %F{green}${vcs_info_msg_0_}%f $ '
 
-
 for DOTFILE in "$DOTFILES_DIR"/system/.{alias,function,airflow}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done

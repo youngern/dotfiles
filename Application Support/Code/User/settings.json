@@ -3,8 +3,9 @@
     "editor.detectIndentation": false,
     "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
     "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-    "[json]": {},
-    "json.format.enable": false,
+    "[json]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+    },
     "javascript.preferences.quoteStyle": "double",
     "typescript.preferences.quoteStyle": "single",
     "prettier.jsxSingleQuote": true,
@@ -26,12 +27,23 @@
     "typescript.format.enable": false,
     "prettier.trailingComma": "all",
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "window.zoomLevel": 1,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "workbench.editorAssociations": {
-      "*.ipynb": "jupyter.notebook.ipynb"
+      "*.ipynb": "jupyter-notebook"
     },
     "search.exclude": {
       "venv/": true
-    }
+    },
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "javascript.format.enable": false,
+    "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "left"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "editor.wordWrap": "on",
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "window.zoomLevel": 2
   }

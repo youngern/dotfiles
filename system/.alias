@@ -8,3 +8,13 @@ function pydown () {
     deactivate
   fi
 }
+
+function lamb() {
+  port=9000
+  json=$1
+  curl -XPOST "http://localhost:${port}/2015-03-31/functions/function/invocations" -d "${json}"
+}
+
+function chrome() {
+  open -a "Google Chrome" "$@"
+}

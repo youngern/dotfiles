@@ -11,6 +11,8 @@ brew "postgres"
 brew "yarn"
 brew "tfenv"
 cask "docker"
+brew "librsvg"
+brew "jq"
 
 # browsers
 cask "google-chrome"
@@ -29,3 +31,4 @@ cask "authy"
 cask "spotify"
 cask "dropbox"
 cask "postman"
+cask "aws-vault"
