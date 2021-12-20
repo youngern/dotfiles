@@ -1,2 +1,4 @@
 *.lock.json
 *.lock
+
+oh-my-zsh/

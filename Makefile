@@ -30,6 +30,9 @@ vscode-extensions:
 defaults:
 	. $(DOTFILES_DIR)/macos/defaults
 
+editor:
+	. $(DOTFILES_DIR)/setup/oh-my-zsh
+
 link:
 	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then \
 		mv -v $(HOME)/$$FILE{,.bak}; fi; done
