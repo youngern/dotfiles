@@ -46,3 +46,4 @@ alias magic-cli="python $HOME/.magic-cli/magic-cli.py"
 for DOTFILE in "$DOTFILES_DIR"/system/.{alias,function,airflow}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
+
