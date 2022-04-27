@@ -1,6 +1,6 @@
 [ -z "$PS1" ] && return
 
-export ZSH="/Users/youngern/.dotfiles/oh-my-zsh"
+export ZSH="$HOME/.dotfiles/oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 plugins=(git)
