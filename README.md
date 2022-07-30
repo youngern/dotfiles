@@ -11,7 +11,7 @@ xcode-select --install
 # remove `--restart` if you don't want to do that right now
 sudo softwareupdate -i -a --restart
 
-git clone <path-to-this-repo.git> "$HOME/.dotfiles"
+git clone https://github.com/youngern/dotfiles.git "$HOME/.dotfiles"
 ```
 
 2. Change user info to correct user in `config/git/config`
