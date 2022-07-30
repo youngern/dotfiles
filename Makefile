@@ -5,14 +5,15 @@ export XDG_CONFIG_HOME = $(HOME)/.config
 export APPLICATION_SUPPORT_HOME = $(HOME)/Library/Application\ Support
 export STOW_DIR = $(DOTFILES_DIR)
 
-install: packages core link
+install: editor link packages core
 
-core: git-ssh defaults npm editor
+core: git-ssh defaults npm
 
 packages: install-brew install-brew-packages vscode-extensions
 
 install-brew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	. $(DOTFILES_DIR)/runcom/.zprofile
 
 install-brew-packages:
 	brew bundle --file=packages/Brewfile
@@ -27,6 +28,7 @@ git-ssh:
 vscode-extensions:
 	$(info    setting up vscode extensions)
 	for EXT in $$(cat packages/Codefile); do code --install-extension $$EXT; done
+	stow -t $(APPLICATION_SUPPORT_HOME) "Application Support"
 
 defaults:
 	$(info    setting up osx defaults)
@@ -43,7 +45,6 @@ link:
 	mkdir -p $(XDG_CONFIG_HOME)
 	stow -t $(HOME) runcom
 	stow -t $(XDG_CONFIG_HOME) config
-	stow -t $(APPLICATION_SUPPORT_HOME) "Application Support"
 
 restart:
 	sudo shutdown -r now
