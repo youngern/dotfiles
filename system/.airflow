@@ -1,3 +1,0 @@
- export AIRFLOW_HOME="$HOME/apps/magic-flow"
- export AIRFLOW__CORE__LOAD_EXAMPLES=False
- export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
