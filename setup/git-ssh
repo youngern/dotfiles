@@ -21,4 +21,7 @@ ssh-add -K "$HOME/.ssh/id_ed25519"
 
 pbcopy < ~/.ssh/id_ed25519.pub
 
+echo "SSH key copied to clipboard"
+read -n 1 -s -r -p "Press any key to continue"
+
 open "$new_token_endpoint"
