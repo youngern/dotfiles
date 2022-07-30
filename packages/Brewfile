@@ -32,4 +32,5 @@ cask "spotify"
 cask "dropbox"
 cask "postman"
 cask "aws-vault"
-cask "logitech-options"
+# not working with silicon chip
+# cask "logitech-options"

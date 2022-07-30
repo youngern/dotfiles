@@ -26,6 +26,7 @@ defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadHandResting" -int 1
 defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadHorizScroll" -int 1
 defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadMomentumScroll" -int 1
 defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadPinch" -int 1
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadCornerSecondaryClick" -int 2
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1

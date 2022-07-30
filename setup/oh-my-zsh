@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
+zsh_path="$HOME/.dotfiles/oh-my-zsh"
 
+if [ -d "$zsh_path" ]; then
+echo "already installed. skipping"
+else
 ZSH="$HOME/.dotfiles/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
